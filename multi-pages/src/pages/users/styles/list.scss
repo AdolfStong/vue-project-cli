@@ -1,0 +1,117 @@
+.user-list {
+  position: relative;
+  // padding-bottom: 30px;
+  p {
+    margin: 0;
+  }
+  .btn-text {
+    color: #2a75ed;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .icon-status {
+    font-size: 20px;
+    &.el-icon-success {
+      color: #42b983;
+    }
+    &.el-icon-error {
+      color: rgb(151, 151, 151);
+    }
+  }
+
+  .empty-text {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 330px;
+    width: 150px;
+    transform: translateX(-50%);
+    z-index: 100;
+    text-align: center;
+    color: #999;
+  }
+  .statistics-section {
+    padding: 6px 10px;
+    background-color: #f7fafc;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.65);
+    i {
+      font-size: 16px;
+    }
+  }
+
+  .el-dropdown-link {
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  ::v-deep {
+    .el-table{
+      overflow-x: scroll;
+    }
+    .el-tabs--border-card > .el-tabs__content {
+      padding: 0;
+    }
+    .el-switch__core {
+      height: 14px;
+      width: 30px !important;
+      &:after {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    .el-switch.is-checked .el-switch__core::after {
+      margin-left: -11px;
+    }
+    .el-tree-node__content > .is-leaf.el-tree-node__expand-icon {
+      padding: 0;
+    }
+    .el-tree--highlight-current
+      .el-tree-node.is-current
+      > .el-tree-node__content {
+      background-color: transparent;
+      color: #2a75ed;
+    }
+    .sort-operate-box {
+      position: relative;
+      cursor: pointer;
+      .sort-icon-arrow {
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        .top {
+          position: absolute;
+          bottom: 0;
+        }
+        .active {
+          color: #2a75ed;
+        }
+        .top-color {
+          position: absolute;
+          bottom: 0;
+        }
+        .bottom {
+          position: absolute;
+          top: -6px;
+        }
+        .bottom-color {
+          position: absolute;
+          top: -6px;
+        }
+      }
+    }
+  }
+  .system-container-sidebar {
+    transition: all 0.2s;
+    &.closed {
+      margin-left: -130px;
+    }
+  }
+}
+.team-user-list {
+  .user-list {
+    .empty-text {
+      top: 100px;
+    }
+  }
+}
